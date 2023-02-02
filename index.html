@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screen: {
+            large: "789px",
+            larger: "1039px",
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              dark: "rgba(0,0,0,.1)",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body class="text-white">
+    <!-- nav bar -->
+    <div
+      class="w-[100%] h-[700px] relative"
+      style="
+        background-image: url(/images/course-2660924_1920.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="top-0 absolute w-[100%] h-[700px] bg-black opacity-50"></div>
+      <div class="flex justify-between mx-[3%] sticky top-0">
+        <div class="z-10 text-2xl rounded-[100%] border p-3 mt-[20px]">
+          D.Gadgets
+        </div>
+
+        <nav
+          class="hidden md:block md:text-2xl flex md:my-auto md:space-x-10 space-x-20 text-lg z-10"
+        >
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Products</a>
+          <a href="">Contact us</a>
+        </nav>
+
+        <div class="hamburger md:hidden mt-[30px] z-50">
+          <iconify-icon
+            class="z-10"
+            icon="icon-park-outline:hamburger-button"
+            style="color: white"
+            width="40"
+            height="40"
+          ></iconify-icon>
+        </div>
+      </div>
+      <nav
+        id="menubar"
+        class="transparent hidden flex flex-col justify-center items-center underline"
+      >
+        <a class="p-3" href="">Home</a>
+        <a class="p-3" href="">About</a>
+        <a class="p-3" href="">Products</a>
+        <a class="p-3" href="">Contact us</a>
+      </nav>
+
+      <div class="flex flex-col md:flex md:flex-row md:mt-[40px]">
+        <div class="w-[100%] md:w-[50%] my-auto z-10">
+          <div class="text-5xl md:text-6xl mt-[50px] mx-[5%]">
+            Best deals for gadgets and accessories.
+          </div>
+          <div class="mx-[5%]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            tenetur id quisquam vel aperiam eligendi, voluptatibus asperiores
+            er.
+          </div>
+        </div>
+
+        <swiper-container
+          class="mySwiper"
+          pagination="true"
+          pagination-clickable="true"
+          space-between="30"
+          centered-slides="true"
+          autoplay-delay="2500"
+          autoplay-disable-on-interaction="false"
+        >
+          <swiper-slide
+            ><img src="/images/newgadget.png" alt=""
+          /></swiper-slide>
+          <swiper-slide
+            ><img src="/images/anotherGadget.png" alt=""
+          /></swiper-slide>
+          <swiper-slide
+            ><img
+              src="/images/cellphones-5507342_1920-removebg-preview.png"
+              alt=""
+          /></swiper-slide>
+          <swiper-slide
+            ><img src="/images/anothergadget2.png" alt=""
+          /></swiper-slide>
+          <swiper-slide
+            ><img src="/images/newgadget3.png" alt=""
+          /></swiper-slide>
+        </swiper-container>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col text-black mx-[5%] my-[50px] gap-5 md:grid md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div
+        class="rounded-lg p-6"
+        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      >
+        <iconify-icon
+          class="flex justify-center"
+          icon="noto:desktop-computer"
+          width="50"
+        ></iconify-icon>
+        <p class="text-center text-2xl font-bold">Computer</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo magnam
+          ratione iure quaerat obcaecati! Quae molestiae voluptatem distinctio
+          nesciunt ea? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Odit, incidunt.
+        </p>
+      </div>
+
+      <div
+        class="rounded-lg flex flex-col p-6"
+        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      >
+        <iconify-icon
+          class="flex justify-center"
+          icon="fluent-emoji-flat:laptop"
+          width="50"
+        ></iconify-icon>
+        <p class="text-center text-2xl font-bold">Laptop</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo magnam
+          ratione iure quaerat obcaecati! Quae molestiae voluptatem distinctio
+          nesciunt ea? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Dolor, voluptatibus.
+        </p>
+      </div>
+
+      <div
+        class="rounded-lg flex flex-col p-6"
+        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      >
+        <iconify-icon
+          class="flex justify-center"
+          icon="fxemoji:cellphone"
+          width="50"
+        ></iconify-icon>
+        <p class="text-center text-2xl font-bold">Phone</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo magnam
+          ratione iure quaerat obcaecati! Quae molestiae voluptatem distinctio
+          nesciunt ea? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Alias, debitis.
+        </p>
+      </div>
+
+      <div
+        class="rounded-lg flex flex-col p-6"
+        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      >
+        <iconify-icon
+          class="flex justify-center"
+          icon="flat-color-icons:headset"
+          width="50"
+        ></iconify-icon>
+        <p class="text-center text-2xl font-bold">Headset</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo magnam
+          ratione iure quaerat obcaecati! Quae molestiae voluptatem distinctio
+          nesciunt ea? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Alias, debitis.
+        </p>
+      </div>
+
+      <div
+        class="rounded-lg flex flex-col p-6"
+        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      >
+        <iconify-icon
+          class="flex justify-center"
+          icon="emojione-v1:camera"
+          width="50"
+        ></iconify-icon>
+        <p class="text-center text-2xl font-bold">Camera</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo magnam
+          ratione iure quaerat obcaecati! Quae molestiae voluptatem distinctio
+          nesciunt ea? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Alias, debitis.
+        </p>
+      </div>
+
+      <div
+        class="rounded-lg flex flex-col p-6"
+        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      >
+        <iconify-icon
+          class="flex justify-center"
+          icon="flat-color-icons:tablet-android"
+          width="50"
+        ></iconify-icon>
+        <p class="text-center text-2xl font-bold">Tablet</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo magnam
+          ratione iure quaerat obcaecati! Quae molestiae voluptatem distinctio
+          nesciunt ea? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Alias, debitis.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-blue-800 h-[500px] lg:flex md:h-[600px] ">
+      <div
+        class="text-[60px] text-center lg:w-[50%] lg:text-9xl lg:flex lg:justify-center lg:items-center"
+      >
+        UP TO <br />
+        40% OFF!
+      </div>
+      <img class="mx-auto" src="/images/gadgetsales.png" alt="" />
+    </div>
+    <br />
+
+    <div class="text-center text-3xl font-bold underline text-black">
+      Customer Reviews
+    </div>
+
+    <div class="hidden md:block text-black lg:flex my-[30px] mx-[5%]">
+      <div>
+        <p class="text-2xl font-bold">Detoun</p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eveniet
+        suscipit et recusandae numquam sunt. Optio itaque beatae quis
+        exercitationem. Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Nisi, sapiente.
+      </div>
+      <div>
+        <p class="text-2xl font-bold">Desewa</p>
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eveniet
+        suscipit et recusandae numquam sunt. Optio itaque beatae quis
+        exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Quas, inventore."
+      </div>
+      <div>
+        <p class="text-2xl font-bold">Dedokun</p>
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eveniet
+        suscipit et recusandae numquam sunt. Optio itaque beatae quis
+        exercitationem. Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Ex, commodi!"
+      </div>
+    </div>
+
+    <div class="mx-[5%] text-lg md:hidden">
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-clickable="true"
+        space-between="30"
+        centered-slides="true"
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+      >
+        <swiper-slide>
+          <p class="text-2xl font-bold">Detoun</p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+          eveniet suscipit et recusandae numquam sunt. Optio itaque beatae quis
+          exercitationem. Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Nisi, sapiente.</swiper-slide
+        >
+        <swiper-slide
+          ><p class="text-2xl font-bold">Desewa</p>
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+          eveniet suscipit et recusandae numquam sunt. Optio itaque beatae quis
+          exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Quas, inventore."</swiper-slide
+        >
+        <swiper-slide
+          ><p class="text-2xl font-bold">Dedokun</p>
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+          eveniet suscipit et recusandae numquam sunt. Optio itaque beatae quis
+          exercitationem. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Ex, commodi!"</swiper-slide
+        >
+      </swiper-container>
+    </div>
+
+    <div
+      class="bg-slate-300 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 lg:h-[400px] lg:flex lg:justify-center lg:items-center"
+    >
+      <div class="flex flex-col text-black mx-[5%] mt-[30px]">
+        <iconify-icon
+          class="mx-auto"
+          icon="game-icons:wireframe-globe"
+          style="color: blue"
+          width="50"
+        ></iconify-icon
+        ><br />
+        <p class="mx-auto font-bold">Nationwide Shipping</p>
+        <p class="text-center">
+          We deliver your package to your doorstep wherever you may be in the
+          country
+        </p>
+      </div>
+
+      <div class="flex flex-col text-black mx-[5%] my-[30px]">
+        <iconify-icon
+          class="mx-auto"
+          icon="arcticons:bestbuy"
+          style="color: blue"
+          width="50"
+        ></iconify-icon
+        ><br />
+        <p class="mx-auto font-bold">Best Quality</p>
+        <p class="text-center">
+          Our products are of the best quality. we deal only on authentic and
+          original
+        </p>
+      </div>
+
+      <div class="flex flex-col text-black mx-[5%]">
+        <iconify-icon
+          class="mx-auto"
+          icon="arcticons:bestprice"
+          style="color: blue"
+          width="50"
+        ></iconify-icon
+        ><br />
+        <p class="mx-auto font-bold">Best Offers</p>
+        <p class="text-center">
+          We always give our customers the best offers because they deserve it
+        </p>
+      </div>
+
+      <div class="flex flex-col text-black mx-[5%] lg:mt-">
+        <iconify-icon
+          class="mx-auto"
+          icon="arcticons:secure-box"
+          style="color: blue"
+          width="50"
+        ></iconify-icon
+        ><br />
+        <p class="mx-auto font-bold">Secure Payments</p>
+        <p class="text-center">
+          We make sure that your orders gets delivered securely and on time
+        </p>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="bg-blue-800 pt-[30px] pb-[50px]">
+      <div class="">
+        <div class="mx-[10%] lg:flex lg:mx-[5%] lg:gap-[20px]">
+          <div class="text-2xl rounded-[50%] border p-3 w-[45%] md:w-[20%] lg:w-[150px] lg:h-[60px] "> D.Gadgets</div>
+          <div class="">
+            <p class="font-bold text-2xl">About us</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus, corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, laborum!
+            </p>
+          </div>
+          <br />
+
+          <div class="">
+            <p class="font-bold text-2xl">Contact us</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus, corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, dicta?
+            </p>
+          </div>
+        </div>
+        <br />
+
+        <div class="flex flex-col gap-[10px] mx-[10%] lg:mx-[5%]">
+          <div class="text-2xl font-bold">Newsletter</div>
+          <input
+            class="p-3 w-[90%]"
+            type="text"
+            id="email"
+            placeholder="Enter your mail"
+          />
+          <button class="w-[200px] h-[50px] rounded-lg bg-blue-300">
+            SUBSCRIBE
+          </button>
+        </div>
+      </div><br>
+      <div class="md:flex md:justify-between">
+      <div class="mx-[10%] lg:flex lg:mx-[5%]">Copyright © 2023 D.Gadgets. Powered by dedayorr.</div>
+      <div class="flex justify-center space-x-6 mx-[10%] md:justify-start ">
+        <iconify-icon
+          icon="ion:logo-facebook"
+          style="color: white"
+          width="50"
+        ></iconify-icon>
+        <iconify-icon
+          icon="ant-design:twitter-circle-filled"
+          style="color: white"
+          width="50"
+        ></iconify-icon>
+        <iconify-icon
+          icon="entypo-social:linkedin-with-circle"
+          style="color: white"
+          width="50"
+        ></iconify-icon>
+        <iconify-icon
+          icon="entypo-social:instagram-with-circle"
+          style="color: white"
+          width="50"
+        ></iconify-icon>
+      </div>
+    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>
