@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screen: {
+            large: "789px",
+            larger: "1039px",
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              dark: "rgba(0,0,0,.1)",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="h-[90px]" style="background-color: rgba(6, 6, 77, 0.875); ">
+    <div class="flex justify-between mx-[3%] text-white " >
+        <div class="z-10 text-2xl rounded-[100%] border p-3 mt-[20px]">
+            D.Gadgets
+          </div>
+  
+          <nav
+            class="hidden md:block md:text-2xl flex md:my-auto md:space-x-10 space-x-20 text-lg z-10"
+          >
+            <a class="active:bg-blue-500" href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="">Products</a>
+            <a href="">Contact us</a>
+          </nav>
+  
+          <div class="hamburger md:hidden mt-[30px] z-50">
+            <iconify-icon
+              class="z-10"
+              icon="icon-park-outline:hamburger-button"
+              style="color: white"
+              width="40"
+              height="40"
+            ></iconify-icon>
+          </div>
+        </div>
+        <nav
+          id="menubar"
+          class="text- transparent hidden flex flex-col justify-center items-center underline"
+        >
+          <a class="p-3 z-10 active:bg-blue-500" href="/index.html">Home</a>
+          <a class="p-3 z-10" href="/about.html">About</a>
+          <a class="p-3 z-10" href="">Products</a>
+          <a class="p-3 z-10" href="">Contact us</a>
+        </nav>
+    </div>
+</div>
+
+<script src="/index.js"></script>
+</body>
+</html>

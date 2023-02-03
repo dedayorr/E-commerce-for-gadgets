@@ -44,9 +44,9 @@
         <nav
           class="hidden md:block md:text-2xl flex md:my-auto md:space-x-10 space-x-20 text-lg z-10"
         >
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Products</a>
+          <a class="active:bg-blue-500" href="">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/product.html">Products</a>
           <a href="">Contact us</a>
         </nav>
 
@@ -64,10 +64,10 @@
         id="menubar"
         class="transparent hidden flex flex-col justify-center items-center underline"
       >
-        <a class="p-3" href="">Home</a>
-        <a class="p-3" href="">About</a>
-        <a class="p-3" href="">Products</a>
-        <a class="p-3" href="">Contact us</a>
+        <a class="p-3 z-10 active:bg-blue-500" href="">Home</a>
+        <a class="p-3 z-10" href="/about.html">About</a>
+        <a class="p-3 z-10" href="">Products</a>
+        <a class="p-3 z-10" href="">Contact us</a>
       </nav>
 
       <div class="flex flex-col md:flex md:flex-row md:mt-[40px]">
@@ -224,7 +224,7 @@
       </div>
     </div>
 
-    <div class="bg-blue-800 h-[500px] lg:flex md:h-[600px] ">
+    <div class="bg-blue-800 h-[500px] lg:flex md:h-[600px]">
       <div
         class="text-[60px] text-center lg:w-[50%] lg:text-9xl lg:flex lg:justify-center lg:items-center"
       >
@@ -358,16 +358,22 @@
         </p>
       </div>
     </div>
+
     <!-- footer -->
     <footer class="bg-blue-800 pt-[30px] pb-[50px]">
       <div class="">
         <div class="mx-[10%] lg:flex lg:mx-[5%] lg:gap-[20px]">
-          <div class="text-2xl rounded-[50%] border p-3 w-[45%] md:w-[20%] lg:w-[150px] lg:h-[60px] "> D.Gadgets</div>
+          <div
+            class="text-2xl rounded-[50%] border p-3 w-[45%] md:w-[20%] lg:w-[150px] lg:h-[60px]"
+          >
+            D.Gadgets
+          </div>
           <div class="">
             <p class="font-bold text-2xl">About us</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, laborum!
+              Repellendus, corporis. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Aliquid, laborum!
             </p>
           </div>
           <br />
@@ -376,7 +382,8 @@
             <p class="font-bold text-2xl">Contact us</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, dicta?
+              Repellendus, corporis. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Similique, dicta?
             </p>
           </div>
         </div>
@@ -394,32 +401,35 @@
             SUBSCRIBE
           </button>
         </div>
-      </div><br>
-      <div class="md:flex md:justify-between">
-      <div class="mx-[10%] lg:flex lg:mx-[5%]">Copyright © 2023 D.Gadgets. Powered by dedayorr.</div>
-      <div class="flex justify-center space-x-6 mx-[10%] md:justify-start ">
-        <iconify-icon
-          icon="ion:logo-facebook"
-          style="color: white"
-          width="50"
-        ></iconify-icon>
-        <iconify-icon
-          icon="ant-design:twitter-circle-filled"
-          style="color: white"
-          width="50"
-        ></iconify-icon>
-        <iconify-icon
-          icon="entypo-social:linkedin-with-circle"
-          style="color: white"
-          width="50"
-        ></iconify-icon>
-        <iconify-icon
-          icon="entypo-social:instagram-with-circle"
-          style="color: white"
-          width="50"
-        ></iconify-icon>
       </div>
-    </div>
+      <br />
+      <div class="md:flex md:justify-between">
+        <div class="mx-[10%] lg:flex lg:mx-[5%]">
+          Copyright © 2023 D.Gadgets. Powered by dedayorr.
+        </div>
+        <div class="flex justify-center space-x-6 mx-[10%] md:justify-start">
+          <iconify-icon
+            icon="ion:logo-facebook"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="ant-design:twitter-circle-filled"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="entypo-social:linkedin-with-circle"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="entypo-social:instagram-with-circle"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
