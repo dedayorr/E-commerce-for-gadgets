@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
+    <link rel="stylesheet" href="/product.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -23,46 +24,639 @@
       };
     </script>
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-</head>
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </head>
+  <body>
     <!-- nav bar -->
-    <div class="h-[90px]" style="background-color: rgba(6, 6, 77, 0.875); ">
-    <div class="flex justify-between mx-[3%] text-white " >
+    <div class="h-[90px]" style="background-color: rgba(6, 6, 77, 0.875)">
+      <div class="flex justify-between mx-[3%] text-white">
         <div class="z-10 text-2xl rounded-[100%] border p-3 mt-[20px]">
-            D.Gadgets
-          </div>
-  
-          <nav
-            class="hidden md:block md:text-2xl flex md:my-auto md:space-x-10 space-x-20 text-lg z-10"
-          >
-            <a class="active:bg-blue-500" href="/index.html">Home</a>
-            <a href="/about.html">About</a>
-            <a href="">Products</a>
-            <a href="">Contact us</a>
-          </nav>
-  
-          <div class="hamburger md:hidden mt-[30px] z-50">
-            <iconify-icon
-              class="z-10"
-              icon="icon-park-outline:hamburger-button"
-              style="color: white"
-              width="40"
-              height="40"
-            ></iconify-icon>
+          D.Gadgets
+        </div>
+
+        <nav
+          class="hidden md:block md:text-2xl flex md:my-auto md:space-x-14 text-lg"
+        >
+          <a class="active:bg-blue-500" href="/index.html">Home</a>
+          <a href="/about.html">About</a>
+          <a href="">Products</a>
+          <a href="">Contact us</a>
+          <a class="" href="">
+            <iconify-icon icon="noto:shopping-cart" flip="horizontal"
+              >cart</iconify-icon
+            >
+            <span>Cart</span>
+          </a>
+        </nav>
+
+        <div class="hamburger md:hidden mt-[30px] z-50">
+          <iconify-icon
+            class="z-10"
+            icon="icon-park-outline:hamburger-button"
+            style="color: white"
+            width="40"
+            height="40"
+          ></iconify-icon>
+        </div>
+      </div>
+      <nav
+        id="menubar"
+        class="hidden flex flex-col justify-center items-center underline"
+      >
+        <a class="p-3 z-10" href="/index.html">Home</a>
+        <a class="p-3 z-10" href="/about.html">About</a>
+        <a class="p-3 z-10" href="">Products</a>
+        <a class="p-3 z-10" href="">Contact us</a>
+      </nav>
+    </div>
+
+    <a
+      class="md:hidden mr-[5%] mt-[5%] border rounded-md p-[1%] text-2xl float-right"
+      href=""
+    >
+      <iconify-icon icon="noto:shopping-cart" flip="horizontal"></iconify-icon>
+    </a>
+
+    <!-- Desktop view of section one-->
+    <div
+      class="hidden lg:flex lg:justify-center lg:p-[5%] lg:gap-[20px] lg:w-[100%]"
+    >
+      <div
+        class="p-[5%] lg:p-[3%]"
+        style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
+      >
+        <div class="text-2xl font-bold">Category</div>
+        <ul style="list-style-type: square">
+          <li class="my-[20%]"><a href="">Computer</a></li>
+          <li class="my-[20%]"><a href="">Laptop</a></li>
+          <li class="my-[20%]"><a href="">Phone</a></li>
+          <li class="my-[20%]"><a href="">Camera</a></li>
+          <li class="my-[20%]"><a href="">Headset</a></li>
+          <li class="my-[20%]"><a href="">Tablet</a></li>
+        </ul>
+      </div>
+
+      <div
+        class="p-[3%] text-2xl font-bold w-[60%]"
+        style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
+      >
+        <div>40% off</div>
+        <div class="text-5xl text-blue-400">BEST PRICE</div>
+        <swiper-container
+          class="mySwiper"
+          pagination="true"
+          pagination-clickable="true"
+          centered-slides="true"
+          autoplay-delay="2500"
+          autoplay-disable-on-interaction="false"
+        >
+          <swiper-slide
+            ><img class=" " src="/images/varietyGadget.png" alt=""
+          /></swiper-slide>
+          <swiper-slide
+            ><img class=" " src="/images/headphone-159569_1280.png" alt=""
+          /></swiper-slide>
+          <swiper-slide
+            ><img class=" " src="/images/camera-158262_1280.png" alt=""
+          /></swiper-slide>
+        </swiper-container>
+      </div>
+
+      <div
+        class="text-6xl p-[3%] font-bold text-blue-400"
+        style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
+      >
+        <div>
+          Your Everyday Delivery Made Easy.
+          <iconify-icon icon="noto-v1:thumbs-up"></iconify-icon>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop view of section one  -->
+
+    <!-- Mobile view of section one-->
+    <div
+      class="lg:hidden mx-auto mt-[20%] w-[90%] p-[3%] text-2xl font-bold"
+      style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
+    >
+      <div>Official store</div>
+      <div class="text-5xl text-blue-400">BEST PRICE</div>
+
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-clickable="true"
+        centered-slides="true"
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+      >
+        <swiper-slide
+          ><img class="w-[100%]" src="/images/varietyGadget.png" alt=""
+        /></swiper-slide>
+        <swiper-slide
+          ><img class="w-[70%]" src="/images/headphone-159569_1280.png" alt=""
+        /></swiper-slide>
+        <swiper-slide
+          ><img class="w-[80%]" src="/images/camera-158262_1280.png" alt=""
+        /></swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div
+      class="lg:hidden dropdown my-[10%] w-[90%] mx-auto"
+      style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
+    >
+      <div
+        class="p-[3%] text-2xl text-center font-bold flex justify-center items-center"
+      >
+        Category<iconify-icon
+          icon="gridicons:dropdown"
+          width="50"
+        ></iconify-icon>
+      </div>
+      <ul class="text-center dropdown-content">
+        <li class="my-[5%]"><a href="">Computer</a></li>
+        <li class="my-[5%]"><a href="">Laptop</a></li>
+        <li class="my-[5%]"><a href="">Phone</a></li>
+        <li class="my-[5%]"><a href="">Camera</a></li>
+        <li class="my-[5%]"><a href="">Headset</a></li>
+        <li class="my-[5%]"><a href="">Tablet</a></li>
+      </ul>
+    </div>
+    <!-- Mobile view of section one-->
+
+    
+    <!-- ITEMS -->
+    <div class="font-bold text-6xl text-center">PRODUCTS</div>
+    <br />
+    <div
+      class="items h-[100%] grid grid-cols-2 lg:h-[] overflow-auto  lg:grid lg:grid-cols-6 gap-[2%] p-[2%] w-[93%] mx-auto mb-[5%]"
+      style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
+    >
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/4k camcode.jpeg" alt="" />
+          <div class="text-lg text-center">Digital Camera</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
           </div>
         </div>
-        <nav
-          id="menubar"
-          class="text- transparent hidden flex flex-col justify-center items-center underline"
-        >
-          <a class="p-3 z-10 active:bg-blue-500" href="/index.html">Home</a>
-          <a class="p-3 z-10" href="/about.html">About</a>
-          <a class="p-3 z-10" href="">Products</a>
-          <a class="p-3 z-10" href="">Contact us</a>
-        </nav>
-    </div>
-</div>
+      </div>
 
-<script src="/index.js"></script>
-</body>
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/apple macbook.jpeg" alt="" />
+          <div class="text-lg text-center">Macbook</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/camera.jpeg" alt="" />
+          <div class="text-lg text-center">Digital Camera</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/cartitem1.jpeg" alt="" />
+          <div class="text-lg text-center">Headset</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/cartitem2.jpeg" alt="" />
+          <div class="text-lg text-center">Airpods</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class=" ">
+          <img class="" src="/images/cart items/cartitem4.jpeg" alt="" />
+          <div class="text-lg text-center">Hp Laptop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/cartitem5.jpeg" alt="" />
+          <div class="text-lg text-center">Laptop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/cartitem7.jpeg" alt="" />
+          <div class="text-lg text-center">Laptop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/cartitem8.jpeg" alt="" />
+          <div class="text-lg text-center">Laptop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/dell laptop.jpeg" alt="" />
+          <div class="text-lg text-center">Dell Laptop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/digital camcoder.jpeg" alt="" />
+          <div class="text-lg text-center">Digital Camera</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/havit wireles.jpeg" alt="" />
+          <div class="text-lg text-center">Wireless Headset</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/hp desktop 2.jpeg" alt="" />
+          <div class="text-lg text-center">Desktop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/hp desktop.jpeg" alt="" />
+          <div class="text-lg text-center">Desktop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/infinix.jpeg" alt="" />
+          <div class="text-lg text-center">Infinix Phone</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/iphone 11.jpeg" alt="" />
+          <div class="text-lg text-center">Iphone 11</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/iphone x.jpeg" alt="" />
+          <div class="text-lg text-center">Iphone X</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/iphone xr.jpeg" alt="" />
+          <div class="text-lg text-center">Iphone XR</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/iphone xs max.jpeg" alt="" />
+          <div class="text-lg text-center">Iphone Xs</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/iphone xs max.jpeg" alt="" />
+          <div class="text-lg text-center">Iphone Xs Max</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/iphone xs.jpeg" alt="" />
+          <div class="text-lg text-center">Iphone X</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/lenovo dekstop3.jpeg" alt="" />
+          <div class="text-lg text-center">Lenovo Desktop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/lenovo laptop.jpeg" alt="" />
+          <div class="text-lg text-center">Lenovo Laptop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/lenovo tab.jpeg" alt="" />
+          <div class="text-lg text-center">Tablet</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/lenovo.jpeg" alt="" />
+          <div class="text-lg text-center">Lenovo Laptop</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/macbook.jpeg" alt="" />
+          <div class="text-lg text-center">Macbook</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/techno.jpeg" alt="" />
+          <div class="text-lg text-center">Tecno Phone</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/sony camera.jpeg" alt="" />
+          <div class="text-lg text-center">Sony Camera</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/smasung mobile.jpeg" alt="" />
+          <div class="text-lg text-center">Samsung Mobile</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/samsung.jpeg" alt="" />
+          <div class="text-lg text-center">Samsung</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/samsung tab.jpeg" alt="" />
+          <div class="text-lg text-center">Samsung Tab</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/phone 12.jpeg" alt="" />
+          <div class="text-lg text-center">Iphone 12</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/note plus.jpeg" alt="" />
+          <div class="text-lg text-center">Note plus</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/nikon camera.jpeg" alt="" />
+          <div class="text-lg text-center">Nikon Camera</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="/images/cart items/macbookpro.jpeg" alt="" />
+          <div class="text-lg text-center">Macbook</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦50000</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 pt-[30px] pb-[50px]">
+      <div class="">
+        <div class="mx-[10%] lg:flex lg:mx-[5%] lg:gap-[20px]">
+          <div
+            class="text-2xl rounded-[50%] border p-3 w-[45%] md:w-[20%] lg:w-[150px] lg:h-[60px]"
+          >
+            D.Gadgets
+          </div>
+          <div class="">
+            <p class="font-bold text-2xl">About us</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus, corporis. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Aliquid, laborum!
+            </p>
+          </div>
+          <br />
+
+          <div class="">
+            <p class="font-bold text-2xl">Contact us</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus, corporis. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Similique, dicta?
+            </p>
+          </div>
+        </div>
+        <br />
+
+        <div class="flex flex-col gap-[10px] mx-[10%] lg:mx-[5%]">
+          <div class="text-2xl font-bold">Newsletter</div>
+          <input
+            class="p-3 w-[90%] lg:w-[]"
+            type="text"
+            id="email"
+            placeholder="Enter your mail"
+          />
+          <button class="w-[200px] h-[50px] rounded-lg bg-blue-300">
+            SUBSCRIBE
+          </button>
+        </div>
+      </div>
+      <br />
+      <div class="md:flex md:justify-between">
+        <div class="mx-[10%] lg:flex lg:mx-[5%]">
+          Copyright © 2023 D.Gadgets. Powered by dedayorr.
+        </div>
+        <div class="flex justify-center space-x-6 mx-[10%] md:justify-start">
+          <iconify-icon
+            icon="ion:logo-facebook"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="ant-design:twitter-circle-filled"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="entypo-social:linkedin-with-circle"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="entypo-social:instagram-with-circle"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <div class="mydiv">display the hide</div>
+<button class="hide">hide</button> -->
+
+    <script src="/index.js"></script>
+  </body>
 </html>

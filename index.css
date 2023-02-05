@@ -26,6 +26,24 @@ background-color: rgba(0, 0, 255, 0.606);
 
 
 
+/* nav{ */
+  /* background-color: rgba(0, 0, 255, 0.304); */
+/* } */
+
+  /* .hide{
+    display: none;
+    background-color: blue;
+    padding: 10px;
+  } */
+
+  /* .mydiv:hover{
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px
+  }
+  .mydiv:hover + .hide{
+    display: block;
+  } */
+
+
 
     @media (min-width: 768px){
         html,
