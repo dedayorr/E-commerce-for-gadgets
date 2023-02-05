@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screen: {
+            large: "789px",
+            larger: "1039px",
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              dark: "rgba(0,0,0,.1)",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</head>
+<body class="">
+ <div class=" h-[500px] w-[100%] text-white" style="
+ background-image: url(/images/contact-us-2993000_1920.jpg);
+ background-repeat: no-repeat;
+ background-size:cover;
+ background-position: center;
+">
+  <!-- <div class="top-0 absolute w-[100%] h-[700px] bg-black opacity-50"></div> -->
+  <div class="flex justify-between mx-[3%]">
+    <div class="z-10 text-2xl rounded-[100%] border p-3 mt-[20px]">
+      D.Gadgets
+    </div>
+
+    <nav
+      class="hidden md:block md:text-2xl flex md:my-auto md:space-x-10 space-x-20 text-lg z-10"
+    >
+      <a class="active:bg-blue-500" href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/product.html">Products</a>
+      <a href="">Contact us</a>
+    </nav>
+
+    <div class="hamburger md:hidden mt-[30px] z-50">
+      <iconify-icon
+        class="z-10"
+        icon="icon-park-outline:hamburger-button"
+        style="color: white"
+        width="40"
+        height="40"
+      ></iconify-icon>
+    </div>
+  </div>
+  <nav
+    id="menubar"
+    class="transparent hidden flex flex-col justify-center items-center underline" style="background-color: rgba(6, 6, 77, 0.266)"
+  >
+    <a class="p-3 z-10 active:bg-blue-500" href="/index.html">Home</a>
+    <a class="p-3 z-10" href="/about.html">About</a>
+    <a class="p-3 z-10" href="/product.html">Products</a>
+    <a class="p-3 z-10" href="">Contact us</a>
+  </nav>
+ </div>
+
+ <div class="text-center my-[5%]">
+  <p class="">Questions or Suggestions?</p>
+  <p class="font-bold text-5xl">We are here to help you.</p>
+ </div>
+
+ <form class="bg-blue-800 w-[85%] p-[5%] lg:p-[2%] rounded-lg mb-[10%] lg:bg-blue-200 flex flex-col items-center lg:w-[40%] mx-auto" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px" action="">
+  <input class="w-[100%] p-[1%] lg:text-lg rounded-lg lg:w-[90%] lg:h-[60px] my-[2%]" type="text" id="firstname" placeholder="First name">
+  <input class="w-[100%] p-[1%] lg:text-lg rounded-lg lg:w-[90%] lg:h-[60px] my-[2%]" type="text" id="lastname" placeholder="Last name">
+  <input class="w-[100%] p-[1%] lg:text-lg rounded-lg lg:w-[90%] lg:h-[60px] my-[2%]" type="email" id="email" placeholder="Enter your mail">
+  <input class="w-[100%] p-[1%] lg:text-lg rounded-lg lg:w-[90%] lg:h-[60px] my-[2%]" type="number" id="phone-number" placeholder="Phone number">
+  <textarea class="text-lg p-[1%] rounded-lg w-[100%] md:w-[90%] opacity-50" name="Message" id="textarea" cols="30" rows="6">Message</textarea>
+ </form>
+
+<!-- FOOTER -->
+ <footer class="bg-blue-800 pt-[30px] pb-[50px] text-white">
+  <div class="">
+    <div class="mx-[10%] lg:flex lg:mx-[5%] lg:gap-[20px]">
+      <div
+        class="text-2xl rounded-[50%] border p-3 w-[45%] md:w-[20%] lg:w-[150px] lg:h-[60px]"
+      >
+        D.Gadgets
+      </div>
+      <div class="">
+        <p class="font-bold text-2xl">About us</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Repellendus, corporis. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Aliquid, laborum!
+        </p>
+      </div>
+      <br />
+
+      <div class="">
+        <p class="font-bold text-2xl">Contact us</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Repellendus, corporis. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Similique, dicta?
+        </p>
+      </div>
+    </div>
+    <br />
+
+    <div class="flex flex-col gap-[10px] mx-[10%] lg:mx-[5%]">
+      <div class="text-2xl font-bold">Newsletter</div>
+      <input class="w-[100%] p-[1%] lg:text-lg rounded-lg lg:w-[80%] lg:h-[60px] my-[2%]"
+        class="p-3 w-[90%]"
+        type="text"
+        id="email"
+        placeholder="Enter your mail"
+      />
+      <button class="w-[200px] h-[50px] rounded-lg bg-blue-300">
+        SUBSCRIBE
+      </button>
+    </div>
+  </div>
+  <br />
+  <div class="md:flex md:justify-between">
+    <div class="mx-[10%] lg:flex lg:mx-[5%]">
+      Copyright © 2023 D.Gadgets. Powered by dedayorr.
+    </div>
+    <div class="flex justify-center space-x-6 mx-[10%] md:justify-start">
+      <iconify-icon
+        icon="ion:logo-facebook"
+        style="color: white"
+        width="50"
+      ></iconify-icon>
+      <iconify-icon
+        icon="ant-design:twitter-circle-filled"
+        style="color: white"
+        width="50"
+      ></iconify-icon>
+      <iconify-icon
+        icon="entypo-social:linkedin-with-circle"
+        style="color: white"
+        width="50"
+      ></iconify-icon>
+      <iconify-icon
+        icon="entypo-social:instagram-with-circle"
+        style="color: white"
+        width="50"
+      ></iconify-icon>
+    </div>
+  </div>
+</footer>
+
+<script src="/index.js"></script>
+</body>
+</html>

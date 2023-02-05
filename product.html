@@ -28,7 +28,7 @@
   </head>
   <body>
     <!-- nav bar -->
-    <div class="h-[90px]" style="background-color: rgba(6, 6, 77, 0.875)">
+    <div class="h-[90px] relative" style="background-color: rgba(6, 6, 77, 0.875)">
       <div class="flex justify-between mx-[3%] text-white">
         <div class="z-10 text-2xl rounded-[100%] border p-3 mt-[20px]">
           D.Gadgets
@@ -40,7 +40,7 @@
           <a class="active:bg-blue-500" href="/index.html">Home</a>
           <a href="/about.html">About</a>
           <a href="">Products</a>
-          <a href="">Contact us</a>
+          <a href="/contact.html">Contact us</a>
           <a class="" href="">
             <iconify-icon icon="noto:shopping-cart" flip="horizontal"
               >cart</iconify-icon
@@ -61,12 +61,12 @@
       </div>
       <nav
         id="menubar"
-        class="hidden flex flex-col justify-center items-center underline"
+        class="hidden text-white flex flex-col justify-center items-center underline " style="background-color: rgba(6, 6, 77, 0.875)"
       >
         <a class="p-3 z-10" href="/index.html">Home</a>
         <a class="p-3 z-10" href="/about.html">About</a>
         <a class="p-3 z-10" href="">Products</a>
-        <a class="p-3 z-10" href="">Contact us</a>
+        <a class="p-3 z-10" href="/contact.html">Contact us</a>
       </nav>
     </div>
 
@@ -87,7 +87,7 @@
       >
         <div class="text-2xl font-bold">Category</div>
         <ul style="list-style-type: square">
-          <li class="my-[20%]"><a href="">Computer</a></li>
+          <li  class="computer my-[20%]"><a href="">Computer</a></li>
           <li class="my-[20%]"><a href="">Laptop</a></li>
           <li class="my-[20%]"><a href="">Phone</a></li>
           <li class="my-[20%]"><a href="">Camera</a></li>
@@ -175,7 +175,7 @@
         ></iconify-icon>
       </div>
       <ul class="text-center dropdown-content">
-        <li class="my-[5%]"><a href="">Computer</a></li>
+        <li class="computer my-[5%]"><a href="">Computer</a></li>
         <li class="my-[5%]"><a href="">Laptop</a></li>
         <li class="my-[5%]"><a href="">Phone</a></li>
         <li class="my-[5%]"><a href="">Camera</a></li>
@@ -189,6 +189,7 @@
     <!-- ITEMS -->
     <div class="font-bold text-6xl text-center">PRODUCTS</div>
     <br />
+
     <div
       class="items h-[100%] grid grid-cols-2 lg:h-[] overflow-auto  lg:grid lg:grid-cols-6 gap-[2%] p-[2%] w-[93%] mx-auto mb-[5%]"
       style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
@@ -204,385 +205,11 @@
         </div>
       </div>
 
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/apple macbook.jpeg" alt="" />
-          <div class="text-lg text-center">Macbook</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/camera.jpeg" alt="" />
-          <div class="text-lg text-center">Digital Camera</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/cartitem1.jpeg" alt="" />
-          <div class="text-lg text-center">Headset</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/cartitem2.jpeg" alt="" />
-          <div class="text-lg text-center">Airpods</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class=" ">
-          <img class="" src="/images/cart items/cartitem4.jpeg" alt="" />
-          <div class="text-lg text-center">Hp Laptop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/cartitem5.jpeg" alt="" />
-          <div class="text-lg text-center">Laptop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/cartitem7.jpeg" alt="" />
-          <div class="text-lg text-center">Laptop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/cartitem8.jpeg" alt="" />
-          <div class="text-lg text-center">Laptop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/dell laptop.jpeg" alt="" />
-          <div class="text-lg text-center">Dell Laptop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/digital camcoder.jpeg" alt="" />
-          <div class="text-lg text-center">Digital Camera</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/havit wireles.jpeg" alt="" />
-          <div class="text-lg text-center">Wireless Headset</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/hp desktop 2.jpeg" alt="" />
-          <div class="text-lg text-center">Desktop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/hp desktop.jpeg" alt="" />
-          <div class="text-lg text-center">Desktop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/infinix.jpeg" alt="" />
-          <div class="text-lg text-center">Infinix Phone</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/iphone 11.jpeg" alt="" />
-          <div class="text-lg text-center">Iphone 11</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/iphone x.jpeg" alt="" />
-          <div class="text-lg text-center">Iphone X</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/iphone xr.jpeg" alt="" />
-          <div class="text-lg text-center">Iphone XR</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/iphone xs max.jpeg" alt="" />
-          <div class="text-lg text-center">Iphone Xs</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/iphone xs max.jpeg" alt="" />
-          <div class="text-lg text-center">Iphone Xs Max</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/iphone xs.jpeg" alt="" />
-          <div class="text-lg text-center">Iphone X</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/lenovo dekstop3.jpeg" alt="" />
-          <div class="text-lg text-center">Lenovo Desktop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/lenovo laptop.jpeg" alt="" />
-          <div class="text-lg text-center">Lenovo Laptop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/lenovo tab.jpeg" alt="" />
-          <div class="text-lg text-center">Tablet</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/lenovo.jpeg" alt="" />
-          <div class="text-lg text-center">Lenovo Laptop</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/macbook.jpeg" alt="" />
-          <div class="text-lg text-center">Macbook</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/techno.jpeg" alt="" />
-          <div class="text-lg text-center">Tecno Phone</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/sony camera.jpeg" alt="" />
-          <div class="text-lg text-center">Sony Camera</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/smasung mobile.jpeg" alt="" />
-          <div class="text-lg text-center">Samsung Mobile</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/samsung.jpeg" alt="" />
-          <div class="text-lg text-center">Samsung</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/samsung tab.jpeg" alt="" />
-          <div class="text-lg text-center">Samsung Tab</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/phone 12.jpeg" alt="" />
-          <div class="text-lg text-center">Iphone 12</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/note plus.jpeg" alt="" />
-          <div class="text-lg text-center">Note plus</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/nikon camera.jpeg" alt="" />
-          <div class="text-lg text-center">Nikon Camera</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item mx-auto">
-        <div class="w-[]">
-          <img class="" src="/images/cart items/macbookpro.jpeg" alt="" />
-          <div class="text-lg text-center">Macbook</div>
-          <div class="mx-[2%] my-[3%] flex justify-between items-center">
-            <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
     </div>
 
 
     <!-- Footer -->
-    <footer class="bg-blue-800 pt-[30px] pb-[50px]">
+    <footer class="bg-blue-800 pt-[30px] pb-[50px] text-white">
       <div class="">
         <div class="mx-[10%] lg:flex lg:mx-[5%] lg:gap-[20px]">
           <div
