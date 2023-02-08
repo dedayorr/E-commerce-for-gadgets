@@ -31,19 +31,24 @@
  background-size:cover;
  background-position: center;
 ">
-  <!-- <div class="top-0 absolute w-[100%] h-[700px] bg-black opacity-50"></div> -->
-  <div class="flex justify-between mx-[3%]">
+  
+  <div class="flex justify-between md:space-x-80">
     <div class="z-10 text-2xl rounded-[100%] border p-3 mt-[20px]">
       D.Gadgets
     </div>
 
     <nav
-      class="hidden md:block md:text-2xl flex md:my-auto md:space-x-10 space-x-20 text-lg z-10"
+      class="md:w-[100%] hidden md:block md:text-2xl flex md:my-auto text-lg z-10 md:space-x-10"
     >
-      <a class="active:bg-blue-500" href="/index.html">Home</a>
+      <a class="" href="/index.html">Home</a>
       <a href="/about.html">About</a>
       <a href="/product.html">Products</a>
       <a href="">Contact us</a>
+      <a class="" href="">
+        <iconify-icon icon="noto:shopping-cart" flip="horizontal"
+          >cart</iconify-icon
+        >
+        <span>Cart</span>
     </nav>
 
     <div class="hamburger md:hidden mt-[30px] z-50">
