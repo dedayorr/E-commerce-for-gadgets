@@ -27,27 +27,25 @@
   </head>
   <body>
     <div
-      class="w-[100%] h-[600px]"
+      class="w-[100%] h-[600px] md:h-[400px]"
       style="
         background-image: url(/images/imprint-418593_1920.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: inherit;
       "
     >
-    <!-- overlay -->
+      <!-- overlay -->
       <!-- <div class=" absolute w-[100%] h-[600px] bg-black opacity-50"></div> -->
 
       <div class="">
         <div class="flex justify-between mx-[3%]">
-          <div
-            class="text-white text-2xl rounded-[100%] border p-3 mt-[20px]"
-          >
+          <div class="text-white text-2xl rounded-[100%] border p-3 mt-[20px]">
             D.Gadgets
           </div>
 
           <nav
-            class=" text-white hidden md:block md:text-2xl md:my-auto md:space-x-10 space-x-20 text-lg"
+            class="text-white hidden md:block md:text-2xl md:my-auto md:space-x-10 space-x-20 text-lg"
           >
             <a href="/index.html">Home</a>
             <a class="active:blue" href="">About</a>
@@ -67,36 +65,55 @@
         </div>
 
         <nav
-        id="menubar"
-        class=" text-white hidden flex flex-col justify-center items-center underline " style="background-color: rgba(6, 6, 77, 0.258)"
-      >
-        <a class="p-3" href="/index.html">Home</a>
-        <a class="p-3" href="">About</a>
-        <a class="p-3" href="/product.html">Products</a>
-        <a class="p-3" href="/contact.html">Contact us</a>
-      </nav>
+          id="menubar"
+          class="text-white hidden flex flex-col justify-center items-center underline"
+          style="background-color: rgba(6, 6, 77, 0.258)"
+        >
+          <a class="p-3" href="/index.html">Home</a>
+          <a class="p-3" href="">About</a>
+          <a class="p-3" href="/product.html">Products</a>
+          <a class="p-3" href="/contact.html">Contact us</a>
+        </nav>
 
+        <div
+          class="mx-[5%] p-[2%] rounded-xl md:hidden text-white text-center text-6xl font-bold mt-[50%]"
+          style="background-color: rgba(0, 0, 0, 0.245)"
+        >
+          About us
+        </div>
       </div>
     </div>
-    <br>
+    <br />
 
-    <div class="flex flex-col justifty-center items-center md:flex md:flex-row-reverse gap-[20px] mx-[5%]">
-      <img class="md:w-[50%]" src="/images/cyber-4431067_1920.jpg" alt="">
+    <div
+      class="flex flex-col justifty-center items-center md:flex md:flex-row-reverse gap-[20px] mx-[5%]"
+    >
+      <img class="md:w-[50%]" src="/images/cyber-4431067_1920.jpg" alt="" />
 
       <div class="flex flex-col justifty-center gap-5">
-        <hr style="
-        width: 40%;
-        border: none;
-              height: 5px;
-              background: rgba(0, 0, 255, 0.787);">
-        <p class="lg:text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis necessitatibus eligendi debitis ea, dolore quo facilis quisquam sit cumque error tenetur quam quia repellendus nam! Eos voluptatum at fugiat officiis, corrupti totam porro. Harum debitis maiores dicta cum error distinctio iusto in sapiente, excepturi quis necessitatibus vel magni dolorem non!</p>
+        <hr
+          style="
+            width: 40%;
+            border: none;
+            height: 5px;
+            background: rgba(0, 0, 255, 0.787);
+          "
+        />
+        <p class="lg:text-3xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+          necessitatibus eligendi debitis ea, dolore quo facilis quisquam sit
+          cumque error tenetur quam quia repellendus nam! Eos voluptatum at
+          fugiat officiis, corrupti totam porro. Harum debitis maiores dicta cum
+          error distinctio iusto in sapiente, excepturi quis necessitatibus vel
+          magni dolorem non!
+        </p>
       </div>
     </div>
-<br>
+    <br />
     <div
-      class=" bg-slate-300 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 lg:h-[400px] lg:flex lg:justify-center lg:items-center"
+      class="bg-slate-300 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 lg:h-[400px] lg:flex lg:justify-center lg:items-center"
     >
-      <div class=" flex flex-col text-black mx-[5%] mt-[30px]">
+      <div class="flex flex-col text-black mx-[5%] mt-[30px]">
         <iconify-icon
           class="mx-auto"
           icon="game-icons:wireframe-globe"
@@ -159,12 +176,17 @@
     <footer class="text-white bg-blue-800 pt-[30px] pb-[50px]">
       <div class="">
         <div class="mx-[10%] lg:flex lg:mx-[5%] lg:gap-[20px]">
-          <div class="text-2xl rounded-[50%] border p-3 w-[45%] md:w-[20%] lg:w-[150px] lg:h-[60px] "> D.Gadgets</div>
+          <div
+            class="text-2xl rounded-[50%] border p-3 w-[45%] md:w-[20%] lg:w-[150px] lg:h-[60px]"
+          >
+            D.Gadgets
+          </div>
           <div class="">
             <p class="font-bold text-2xl">About us</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, laborum!
+              Repellendus, corporis. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Aliquid, laborum!
             </p>
           </div>
           <br />
@@ -173,7 +195,8 @@
             <p class="font-bold text-2xl">Contact us</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, dicta?
+              Repellendus, corporis. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Similique, dicta?
             </p>
           </div>
         </div>
@@ -191,32 +214,35 @@
             SUBSCRIBE
           </button>
         </div>
-      </div><br>
-      <div class="md:flex md:justify-between">
-      <div class="mx-[10%] lg:flex lg:mx-[5%]">Copyright © 2023 D.Gadgets. Powered by dedayorr.</div>
-      <div class="flex justify-center space-x-6 mx-[10%] md:justify-start ">
-        <iconify-icon
-          icon="ion:logo-facebook"
-          style="color: white"
-          width="50"
-        ></iconify-icon>
-        <iconify-icon
-          icon="ant-design:twitter-circle-filled"
-          style="color: white"
-          width="50"
-        ></iconify-icon>
-        <iconify-icon
-          icon="entypo-social:linkedin-with-circle"
-          style="color: white"
-          width="50"
-        ></iconify-icon>
-        <iconify-icon
-          icon="entypo-social:instagram-with-circle"
-          style="color: white"
-          width="50"
-        ></iconify-icon>
       </div>
-    </div>
+      <br />
+      <div class="md:flex md:justify-between">
+        <div class="mx-[10%] lg:flex lg:mx-[5%]">
+          Copyright © 2023 D.Gadgets. Powered by dedayorr.
+        </div>
+        <div class="flex justify-center space-x-6 mx-[10%] md:justify-start">
+          <iconify-icon
+            icon="ion:logo-facebook"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="ant-design:twitter-circle-filled"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="entypo-social:linkedin-with-circle"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+          <iconify-icon
+            icon="entypo-social:instagram-with-circle"
+            style="color: white"
+            width="50"
+          ></iconify-icon>
+        </div>
+      </div>
     </footer>
     <script src="/index.js"></script>
   </body>

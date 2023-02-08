@@ -28,14 +28,17 @@
   </head>
   <body>
     <!-- nav bar -->
-    <div class="h-[90px] relative" style="background-color: rgba(6, 6, 77, 0.875)">
+    <div
+      class="h-[90px] relative"
+      style="background-color: rgba(6, 6, 77, 0.875)"
+    >
       <div class="flex justify-between mx-[3%] text-white">
         <div class="z-10 text-2xl rounded-[100%] border p-3 mt-[20px]">
           D.Gadgets
         </div>
 
         <nav
-          class="hidden md:block md:text-2xl flex md:my-auto md:space-x-14 text-lg"
+          class="hidden md:block md:text-2xl flex md:my-auto md:space-x-6 lg:space-x-14 text-lg"
         >
           <a class="active:bg-blue-500" href="/index.html">Home</a>
           <a href="/about.html">About</a>
@@ -61,7 +64,8 @@
       </div>
       <nav
         id="menubar"
-        class="hidden text-white flex flex-col justify-center items-center underline " style="background-color: rgba(6, 6, 77, 0.875)"
+        class="hidden text-white flex flex-col justify-center items-center underline"
+        style="background-color: rgba(6, 6, 77, 0.875)"
       >
         <a class="p-3 z-10" href="/index.html">Home</a>
         <a class="p-3 z-10" href="/about.html">About</a>
@@ -70,12 +74,43 @@
       </nav>
     </div>
 
-    <a
-      class="md:hidden mr-[5%] mt-[5%] border rounded-md p-[1%] text-2xl float-right"
+    <div
+      class="carticon md:hidden mr-[5%] mt-[5%] border rounded-md p-[1%] text-2xl float-right"
       href=""
     >
       <iconify-icon icon="noto:shopping-cart" flip="horizontal"></iconify-icon>
-    </a>
+    </div>
+    <br /><br /><br />
+
+    <div
+      class="carttable item mx-auto w-[90%]"
+      style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+    >
+  <div class="cart-item flex flex-col justify-center">
+    <div class="p-[2%] mx-auto flex justify-between">
+      <img class="w-[50px]" src="/images/cart items/4k camcode.jpeg" alt="" />
+      <div class="text-sm item-title">Digital Camera</div>
+      <input class="item-qty w-[10%] h-[20px] bg-slate-200 text-center" type="number" id="item-qty" value="1">
+        <div class="item-price text-sm">₦50000</div>
+    </div>
+    <button class="remove-btn hover:bg-blue-200 bg-blue-500 p-[1%] rounded mx-auto mb-[3%]">
+     remove
+    </button>
+  </div>  
+
+    <div class="flex flex-col justify-center">
+      <div class="p-[2%] mx-auto flex justify-between">
+        <img class="w-[50px]" src="/images/cart items/4k camcode.jpeg" alt="" />
+        <div class="text-sm item-title">Digital Camera</div>
+        <input class="item-qty w-[10%] h-[20px] bg-slate-200 text-center" type="number" id="item-qty" value="1">
+          <div class="item-price text-sm">₦50000</div>
+      </div>
+      <button class="remove-btn hover:bg-blue-200 bg-blue-500 p-[1%] rounded mx-auto mb-[5%]">
+       remove
+      </button>
+    </div>
+
+    </div>
 
     <!-- Desktop view of section one-->
     <div
@@ -87,12 +122,12 @@
       >
         <div class="text-2xl font-bold">Category</div>
         <ul style="list-style-type: square">
-          <li  class="computer my-[20%]"><a href="">Computer</a></li>
-          <li class="my-[20%]"><a href="">Laptop</a></li>
-          <li class="my-[20%]"><a href="">Phone</a></li>
-          <li class="my-[20%]"><a href="">Camera</a></li>
-          <li class="my-[20%]"><a href="">Headset</a></li>
-          <li class="my-[20%]"><a href="">Tablet</a></li>
+          <li class="computer my-[20%]"><a href="">Computer</a></li>
+          <li class="laptop my-[20%]"><a href="">Laptop</a></li>
+          <li class="phone my-[20%]"><a href="">Phone</a></li>
+          <li class="camera my-[20%]"><a href="">Camera</a></li>
+          <li class="headset my-[20%]"><a href="">Headset</a></li>
+          <li class="tablet my-[20%]"><a href="">Tablet</a></li>
         </ul>
       </div>
 
@@ -175,38 +210,38 @@
         ></iconify-icon>
       </div>
       <ul class="text-center dropdown-content">
-        <li class="computer my-[5%]"><a href="">Computer</a></li>
-        <li class="my-[5%]"><a href="">Laptop</a></li>
-        <li class="my-[5%]"><a href="">Phone</a></li>
-        <li class="my-[5%]"><a href="">Camera</a></li>
-        <li class="my-[5%]"><a href="">Headset</a></li>
-        <li class="my-[5%]"><a href="">Tablet</a></li>
+        <li class="computerTwo my-[5%]"><a href="">Computer</a></li>
+        <li class="laptoptwo my-[5%]"><a href="">Laptop</a></li>
+        <li class="phonetwo my-[5%]"><a href="">Phone</a></li>
+        <li class="cameratwo my-[5%]"><a href="">Camera</a></li>
+        <li class="headsettwo my-[5%]"><a href="">Headset</a></li>
+        <li class="tablettwo my-[5%]"><a href="">Tablet</a></li>
       </ul>
     </div>
     <!-- Mobile view of section one-->
 
-    
     <!-- ITEMS -->
     <div class="font-bold text-6xl text-center">PRODUCTS</div>
     <br />
 
     <div
-      class="items h-[100%] grid grid-cols-2 lg:h-[] overflow-auto  lg:grid lg:grid-cols-6 gap-[2%] p-[2%] w-[93%] mx-auto mb-[5%]"
+      class="items h-[100%] grid grid-cols-2 lg:h-[] overflow-auto lg:grid lg:grid-cols-6 gap-[2%] p-[2%] w-[93%] mx-auto mb-[5%]"
       style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
     >
-      <div class="item mx-auto">
+     <div class="item mx-auto">
         <div class="w-[]">
           <img class="" src="/images/cart items/4k camcode.jpeg" alt="" />
           <div class="text-lg text-center">Digital Camera</div>
           <div class="mx-[2%] my-[3%] flex justify-between items-center">
             <div class="">₦50000</div>
-            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+            <button class="addbtn hover:bg-blue-200 bg-blue-500 p-[2%] rounded">
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
-
     </div>
-
+    <!-- ITEMS -->
 
     <!-- Footer -->
     <footer class="bg-blue-800 pt-[30px] pb-[50px] text-white">
@@ -287,3 +322,21 @@
     <script src="/index.js"></script>
   </body>
 </html>
+
+<!-- <div class="p-[2%] mx-auto flex justify-between">
+  <img class="w-[50px]" src="/images/cart items/4k camcode.jpeg" alt="" />
+  <div class="text-lg">Digital Camera</div>
+    <div class="itemprice">₦50000</div>
+</div>
+<button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded ">
+  Add to Cart
+</button>
+
+<div class="p-[2%] mx-auto flex justify-between">
+  <img class="w-[50px]" src="/images/cart items/4k camcode.jpeg" alt="" />
+  <div class="text-lg">Digital Camera</div>
+    <div class="">₦50000</div>
+</div>
+<button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded ">
+  Add to Cart
+</button> -->

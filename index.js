@@ -1,12 +1,28 @@
 const hamburger = document.getElementsByClassName("hamburger")[0]
 const menuBar = document.getElementById("menubar")
-const computer = document.querySelectorAll('.computer')
 const items = document.getElementsByClassName('items')[0]
-// console.log(hamburger)
+const computer = document.getElementsByClassName('computer')[0]
+const computerTwo = document.getElementsByClassName('computerTwo')[0]
+const laptop = document.getElementsByClassName('laptop')[0]
+const laptoptwo = document.getElementsByClassName('laptoptwo')[0]
+const phone = document.getElementsByClassName('phone')[0]
+const phonetwo = document.getElementsByClassName('phonetwo')[0]
+const headset = document.getElementsByClassName('headset')[0]
+const headsettwo = document.getElementsByClassName('headsettwo')[0]
+const tablet = document.getElementsByClassName('tablet')[0]
+const tablettwo = document.getElementsByClassName('tablettwo')[0]
+const camera = document.getElementsByClassName('camera')[0]
+const cameratwo = document.getElementsByClassName('cameratwo')[0]
+const removebtn = document.getElementsByClassName('remove-btn')
+const addbtn = document.getElementsByClassName('addbtn')
+const cartTable = document.getElementsByClassName("carttable")[0]
+
 hamburger.addEventListener('click', ()=>{
     menuBar.classList.toggle("hidden")
 })
 
+
+// ARRAY OF
 const products = [{
     id:1,
     category: "Camera",
@@ -206,20 +222,294 @@ let product = ""
 for(let items of products){
     product += ` <div class="item mx-auto">
     <div class="w-[]">
-      <img class="" src="${items.img}" />
-      <div class="text-lg text-center">${items.category}</div>
+      <img class="image" src="${items.img}" />
+      <div class="item-category text-lg text-center">${items.category}</div>
       <div class="mx-[2%] my-[3%] flex justify-between items-center">
-        <div class="">₦${items.price}</div>
-        <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+        <div class="price">₦${items.price}</div>
+        <button class="addbtn hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
       </div>
     </div>
   </div>`
 }
 items.innerHTML = product
-// console.log(items)
 
-computer.addEventListener("click", (e)=>{
-e.target.value
-console.log(e.target.value)
-alert('help')
+
+const filteredComputer = products.filter(product => product.category === "Computer");
+const filteredLaptop = products.filter(product => product.category === "Laptop");
+const filteredPhone = products.filter(product => product.category === "Phone");
+const filteredCamera = products.filter(product => product.category === "Camera");
+const filteredHeadset = products.filter(product => product.category === "Headset");
+const filteredTablet = products.filter(product => product.category === "Tablet");
+
+
+// FILTERED COMPUTER
+computer.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredComputer){
+        product += ` <div class="item mx-auto h-[40%] ">
+        <div class="w-[] h-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
 })
+computerTwo.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredComputer){
+        product += ` <div class="item mx-auto h-[40%]">
+        <div class="w-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+
+
+// FILTERED LAPTOP
+laptop.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredLaptop){
+        product += ` <div class="item mx-auto h-[40%] ">
+        <div class="w-[] h-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="addbtn hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+laptoptwo.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredLaptop){
+        product += ` <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+
+
+// FILTERED PHONE
+phone.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredPhone){
+        product += ` <div class="item mx-auto h-[40%] ">
+        <div class="w-[] h-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+phonetwo.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredPhone){
+        product += ` <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+
+
+// FILTERED CAMERA
+camera.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredCamera){
+        product += ` <div class="item mx-auto h-[40%] ">
+        <div class="w-[] h-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+cameratwo.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredCamera){
+        product += ` <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+
+
+// FILTERED HEADSET
+headset.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredHeadset){
+        product += ` <div class="item mx-auto h-[40%]">
+        <div class="w-[] h-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product 
+})
+headsettwo.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredHeadset){
+        product += ` <div class="item mx-auto h-[40%]">
+        <div class="w-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+
+
+// FILTERED TABLET
+tablet.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredTablet){
+        product += ` <div class="item mx-auto h-[40%] ">
+        <div class="w-[] h-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+tablettwo.addEventListener('click', (e)=>{
+    e.preventDefault()
+    let product = ""
+    for(let items of filteredTablet){
+        product += ` <div class="item mx-auto">
+        <div class="w-[]">
+          <img class="" src="${items.img}" />
+          <div class="text-lg text-center">${items.category}</div>
+          <div class="mx-[2%] my-[3%] flex justify-between items-center">
+            <div class="">₦${items.price}</div>
+            <button class="hover:bg-blue-200 bg-blue-500 p-[2%] rounded">Add to Cart</button>
+          </div>
+        </div>
+      </div>`
+    }
+    items.innerHTML = product
+})
+
+
+// To remove item
+for(let i=0; i<removebtn.length; i++){
+    const button = removebtn[i];
+    button.addEventListener('click', removeCartItem)
+}
+
+function removeCartItem(e){
+    const clickedBtn = e.target.parentElement.remove()
+}
+
+// To add item
+for(let i=0; i<addbtn.length; i++){
+    const addTo = addbtn[i];
+    addTo.addEventListener('click', addCartItem)  
+}
+
+
+function addCartItem(e){
+    const addItem = e.target.parentElement.parentElement
+    const category = addItem.getElementsByClassName("item-category")[0]
+    const price = addItem.getElementsByClassName("price")[0]
+    const imageSrc = addItem.getElementsByClassName('image')
+    addItemsToCart(category,price,imageSrc)
+}
+
+
+function addItemsToCart(category,price,imageSrc){
+    const cartSection = document.createElement('div')
+    cartSection.className = "cart-items";
+    // const cartItems = document.getElementsByClassName('carttable')[0]
+    const cartSectionContents = ` <div class="cart-item flex flex-col justify-center">
+    <div class="p-[2%] mx-auto flex justify-between">
+      <img class="w-[50px]" src=${imageSrc} alt="" />
+      <div class="text-sm item-title">${category}</div>
+      <input class="item-qty w-[10%] h-[20px] bg-slate-200 text-center" type="number" id="item-qty" value="1">
+        <div class="item-price text-sm">${price}</div>
+    </div>
+    <button class="remove-btn hover:bg-blue-200 bg-blue-500 p-[1%] rounded mx-auto mb-[3%]">
+     remove
+    </button>
+    </div>`;
+    
+    cartSection.innerHTML = cartSectionContents
+    console.log(cartSection)
+    
+}
+
+
+
