@@ -13,7 +13,6 @@ const tablet = document.getElementsByClassName('tablet')[0]
 const tablettwo = document.getElementsByClassName('tablettwo')[0]
 const camera = document.getElementsByClassName('camera')[0]
 const cameratwo = document.getElementsByClassName('cameratwo')[0]
-const removebtn = document.getElementsByClassName('remove-btn')
 const addbtn = document.getElementsByClassName('addbtn')
 const cartTable = document.getElementsByClassName("carttable")[0]
 
@@ -464,16 +463,6 @@ tablettwo.addEventListener('click', (e)=>{
 })
 
 
-// To remove item
-for(let i=0; i<removebtn.length; i++){
-    const button = removebtn[i];
-    button.addEventListener('click', removeCartItem)
-}
-
-function removeCartItem(e){
-    const clickedBtn = e.target.parentElement.remove()
-}
-
 // To add item
 for(let i=0; i<addbtn.length; i++){
     const addTo = addbtn[i];
@@ -483,9 +472,12 @@ for(let i=0; i<addbtn.length; i++){
 
 function addCartItem(e){
     const addItem = e.target.parentElement.parentElement
-    const category = addItem.getElementsByClassName("item-category")[0]
-    const price = addItem.getElementsByClassName("price")[0]
-    const imageSrc = addItem.getElementsByClassName('image')
+    const category = addItem.getElementsByClassName("item-category")[0].innerText;
+    console.log(category)
+    const price = addItem.getElementsByClassName("price")[0].textContent;
+    console.log(price)
+    const imageSrc = addItem.getElementsByClassName('image')[0].src;
+    console.log(imageSrc)
     addItemsToCart(category,price,imageSrc)
 }
 
@@ -493,10 +485,11 @@ function addCartItem(e){
 function addItemsToCart(category,price,imageSrc){
     const cartSection = document.createElement('div')
     cartSection.className = "cart-items";
-    // const cartItems = document.getElementsByClassName('carttable')[0]
+    const cartItems = document.getElementsByClassName('carttable')[0]
+   
     const cartSectionContents = ` <div class="cart-item flex flex-col justify-center">
     <div class="p-[2%] mx-auto flex justify-between">
-      <img class="w-[50px]" src=${imageSrc} alt="" />
+      <img class="w-[50px] image" src=${imageSrc} alt="" />
       <div class="text-sm item-title">${category}</div>
       <input class="item-qty w-[10%] h-[20px] bg-slate-200 text-center" type="number" id="item-qty" value="1">
         <div class="item-price text-sm">${price}</div>
@@ -507,9 +500,23 @@ function addItemsToCart(category,price,imageSrc){
     </div>`;
     
     cartSection.innerHTML = cartSectionContents
-    console.log(cartSection)
-    
+    // console.log(cartSection)
+    cartItems.appendChild(cartSection)
+   
+    // console.log(cartSection)
+    const removebtn = cartItems.getElementsByClassName('remove-btn')
+    // console.log(removebtn)
+    for(let i=0; i<removebtn.length; i++){
+      const button = removebtn[i];
+      button.addEventListener('click', removeCartItem)
+    }
 }
+
+function removeCartItem(e){
+  const clickedBtn = e.target.parentElement.remove()
+}
+
+
 
 
 

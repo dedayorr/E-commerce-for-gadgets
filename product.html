@@ -28,60 +28,63 @@
   </head>
   <body>
     <!-- nav bar -->
-  <div class="w-[100%] h-[600px] md:h-[600px] relative"
-  style="
-    background-image: url(/images/adam-birkett-8ZeZxNDN3m4-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  ">
     <div
-    class="h-[90px] relative"
-  >
-    <div class="flex justify-between mx-[3%] text-white">
-      <div class="text-2xl rounded-[100%] border p-3 mt-[20px]">
-        D.Gadgets
-      </div>
+      class="w-[100%] h-[600px] md:h-[600px] relative"
+      style="
+        background-image: url(/images/adam-birkett-8ZeZxNDN3m4-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="h-[90px] relative">
+        <div class="flex justify-between mx-[3%] text-white">
+          <div class="text-2xl rounded-[100%] border p-3 mt-[20px]">
+            D.Gadgets
+          </div>
 
-      <nav
-        class="hidden md:block md:text-2xl flex md:my-auto md:space-x-10 space-x-20 lg:space-x-14 text-lg"
-      >
-        <a class="active:bg-blue-500" href="/index.html">Home</a>
-        <a href="/about.html">About</a>
-        <a href="">Products</a>
-        <a href="/contact.html">Contact us</a>
-        <a class="" href="">
-          <iconify-icon icon="noto:shopping-cart" flip="horizontal"
-            >cart</iconify-icon
+          <nav
+            class="hidden md:block md:text-2xl flex md:my-auto md:space-x-10 space-x-20 lg:space-x-14 text-lg"
           >
-          <span>Cart</span>
-        </a>
-      </nav>
+            <a class="active:bg-blue-500" href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="">Products</a>
+            <a href="/contact.html">Contact us</a>
+            <a class="" href="">
+              <iconify-icon icon="noto:shopping-cart" flip="horizontal"
+                >cart</iconify-icon
+              >
+              <span>Cart</span>
+            </a>
+          </nav>
 
-      <div class="hamburger md:hidden mt-[30px] z-50">
-        <iconify-icon
-          class="z-10"
-          icon="icon-park-outline:hamburger-button"
-          style="color: white"
-          width="40"
-          height="40"
-        ></iconify-icon>
+          <div class="hamburger md:hidden mt-[30px] z-50">
+            <iconify-icon
+              class="z-10"
+              icon="icon-park-outline:hamburger-button"
+              style="color: white"
+              width="40"
+              height="40"
+            ></iconify-icon>
+          </div>
+        </div>
+        <nav
+          id="menubar"
+          class="hidden text-white flex flex-col justify-center items-center underline"
+          style="background-color: rgba(6, 6, 77, 0.875)"
+        >
+          <a class="p-3 z-10" href="/index.html">Home</a>
+          <a class="p-3 z-10" href="/about.html">About</a>
+          <a class="p-3 z-10" href="">Products</a>
+          <a class="p-3 z-10" href="/contact.html">Contact us</a>
+        </nav>
+      </div>
+      <div
+        class="mx-[5%] p-[2%] text-5xl text-center mt-[50%] font-bold text-white md:text-center md:mt-[8%] md:w-[50%] md:mx-auto md:text-[90px] rounded-lg"
+        style="background-color: rgba(0, 0, 0, 0.245)"
+      >
+        PRODUCTS
       </div>
     </div>
-    <nav
-      id="menubar"
-      class="hidden text-white flex flex-col justify-center items-center underline"
-      style="background-color: rgba(6, 6, 77, 0.875)"
-    >
-      <a class="p-3 z-10" href="/index.html">Home</a>
-      <a class="p-3 z-10" href="/about.html">About</a>
-      <a class="p-3 z-10" href="">Products</a>
-      <a class="p-3 z-10" href="/contact.html">Contact us</a>
-    </nav>
-  </div>
-  <div class="mx-[5%] p-[2%] text-5xl text-center mt-[50%] font-bold text-white md:text-center md:mt-[8%] md:w-[50%] md:mx-auto md:text-[90px] rounded-lg" style="background-color: rgba(0, 0, 0, 0.245)">
-    PRODUCTS
-  </div>
-  </div>
 
     <div
       class="carticon md:hidden mr-[5%] mt-[5%] border rounded-md p-[1%] text-2xl float-right"
@@ -91,35 +94,46 @@
     </div>
     <br /><br /><br />
 
-    <div 
-      class="carttable item mx-auto w-[90%] hidden"
+    <div
+      class="carttable item mx-auto w-[90%]"
       style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
     >
-  <div class="cart-item flex flex-col justify-center">
-    <div class="p-[2%] mx-auto flex justify-between">
-      <img class="w-[50px]" src="/images/cart items/4k camcode.jpeg" alt="" />
-      <div class="text-sm item-title">Digital Camera</div>
-      <input class="item-qty w-[10%] h-[20px] bg-slate-200 text-center" type="number" id="item-qty" value="1">
-        <div class="item-price text-sm">₦50000</div>
-    </div>
-    <button class="remove-btn hover:bg-blue-200 bg-blue-500 p-[1%] rounded mx-auto mb-[3%]">
-     remove
-    </button>
-  </div>  
-
-    <div class="flex flex-col justify-center">
-      <div class="p-[2%] mx-auto flex justify-between">
-        <img class="w-[50px]" src="/images/cart items/4k camcode.jpeg" alt="" />
-        <div class="text-sm item-title">Digital Camera</div>
-        <input class="item-qty w-[10%] h-[20px] bg-slate-200 text-center" type="number" id="item-qty" value="1">
+      <div class="cart-item flex flex-col justify-center">
+        <div class="p-[2%] mx-auto flex justify-between">
+          <img
+            class="w-[50px]"
+            src="/images/cart items/4k camcode.jpeg"
+            alt=""
+          />
+          <div class="text-sm item-title">Digital Camera</div>
+          <input
+            class="item-qty w-[10%] h-[20px] bg-slate-200 text-center"
+            type="number"
+            id="item-qty"
+            value="1"
+          />
           <div class="item-price text-sm">₦50000</div>
+        </div>
+        <button
+          class="remove-btn hover:bg-blue-200 bg-blue-500 p-[1%] rounded mx-auto mb-[3%]"
+        >
+          remove
+        </button>
       </div>
-      <button class="remove-btn hover:bg-blue-200 bg-blue-500 p-[1%] rounded mx-auto mb-[5%]">
-       remove
+      <br>
+      <div class="cart-total text-2xl font-bold text-center">Total: ₦0 </div>
+    <!-- <br /> -->
+    <div class="flex justify-center mb-[30px]">
+      <button
+        class="purchase-button bg-blue-700 text-white font-bold text-lg rounded-md w-[100px] h-[40px]"
+      >
+        PURCHASE
       </button>
     </div>
-
+    <br>
     </div>
+    
+
 
     <!-- Desktop view of section one-->
     <div
@@ -237,7 +251,7 @@
       class="items h-[100%] grid grid-cols-2 lg:h-[] overflow-auto lg:grid lg:grid-cols-6 gap-[2%] p-[2%] w-[93%] mx-auto mb-[5%]"
       style="box-shadow: rgba(0, 0, 0, 0.341) 0px 3px 8px"
     >
-     <div class="item mx-auto">
+      <!-- <div class="item mx-auto">
         <div class="w-[]">
           <img class="" src="/images/cart items/4k camcode.jpeg" alt="" />
           <div class="text-lg text-center">Digital Camera</div>
@@ -248,7 +262,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- ITEMS -->
 
