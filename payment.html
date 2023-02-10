@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screen: {
+            large: "789px",
+            larger: "1039px",
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              dark: "rgba(0,0,0,.1)",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+  </head>
+  <body class="p-[2%]">
+    <div class="md:text-3xl w-[100%] md:w-[50%] mx-auto bg-blue-700 p-[1%] text-white">Customer Information</div>
+    <div
+      class="h-[300px] md:w-[50%] mx-auto p-[2%]"
+      style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+    >
+      <form class="flex flex-col gap-[10px]" action="">
+        <label for="fname">First Name:</label>
+        <input class="border rounded-md p-2" type="text" placeholder="Your Name" />
+        <label for="Sname">Last Name:</label>
+        <input class="border rounded-md p-2" type="text" placeholder="Your Name" />
+        <label for="email">Email Address:</label>
+        <input class="border rounded-md p-2" type="email" placeholder="Your mail">    
+      </form>
+    </div>
+<br>
+    <!-- <button class="bg-blue-700 p-[1%] w-[100px] text-white mx-auto" type="button" onclick="makePayment()">
+        Pay Now
+      </button> -->
+
+    
+
+    <script src="/payment.js"></script>
+  </body>
+</html>

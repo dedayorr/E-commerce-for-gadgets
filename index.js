@@ -19,6 +19,10 @@ const carts = document.getElementsByClassName("carts")[0];
 const carticon = document.getElementsByClassName("carticon")[0];
 const carticontwo = document.getElementsByClassName("carticontwo")[0];
 
+hamburger.addEventListener("click", () => {
+  menuBar.classList.toggle("hidden");
+});
+
 carticon.addEventListener("click", () => {
   carts.classList.toggle("hidden");
 });
@@ -27,9 +31,7 @@ carticontwo.addEventListener("click", () => {
   carts.classList.toggle("hidden");
 });
 
-hamburger.addEventListener("click", () => {
-  menuBar.classList.toggle("hidden");
-});
+
 
 // ARRAY OF OBJECTS OF PRODUCTS
 const products = [
@@ -242,6 +244,8 @@ for (let items of products) {
 }
 items.innerHTML = product;
 
+
+// FILTERED CATEGORIES
 const filteredComputer = products.filter(
   (product) => product.category === "Computer"
 );
@@ -260,6 +264,7 @@ const filteredHeadset = products.filter(
 const filteredTablet = products.filter(
   (product) => product.category === "Tablet"
 );
+
 
 // FILTERED COMPUTER
 computer.addEventListener("click", (e) => {
@@ -477,7 +482,7 @@ tablettwo.addEventListener("click", (e) => {
   items.innerHTML = product;
 });
 
-// To add item
+// TO ADD ITEM TO CART
 for (let i = 0; i < addbtn.length; i++) {
   const addTo = addbtn[i];
   addTo.addEventListener("click", addCartItem);
@@ -499,14 +504,6 @@ function addItemsToCart(category, price, imageSrc) {
   cartSection.className = "cart-items";
   const cartItems = document.getElementsByClassName("carttable")[0];
 
-  // const cartItemName = cartItems.getElementsByClassName("item-title");
-  // for (let i = 0; i < cartItemName.length; i++) {
-  //   if (cartItemName[i].innerText == title) {
-  //     alert("Item is already added to the cart");
-  //     return;
-  //   }
-  // }
-
   const cartSectionContents = ` <div class="cart-item flex flex-col justify-center">
     <div class="p-[2%] mx-auto flex justify-between">
       <img class="w-[50px] image" src=${imageSrc} alt="" />
@@ -520,24 +517,28 @@ function addItemsToCart(category, price, imageSrc) {
     </div>`;
 
   cartSection.innerHTML = cartSectionContents;
-  // console.log(cartSection)
   cartItems.appendChild(cartSection);
 
-  // console.log(cartSection)
   const removebtn = cartItems.getElementsByClassName("remove-btn");
-  // console.log(removebtn)
   for (let i = 0; i < removebtn.length; i++) {
     const button = removebtn[i];
     button.addEventListener("click", removeCartItem);
   }
+ 
+  cartSection
+  .getElementsByClassName("item-qty")[0]
+  .addEventListener("change", qauntityChanged);
 
   updatedCartTotal();
 }
 
+// TO REMOVE ITEM FROM CART
 function removeCartItem(e) {
   const clickedBtn = e.target.parentElement.remove();
+  updatedCartTotal();
 }
 
+// TO UPDATE CART TOTAL
 function updatedCartTotal() {
   const cartTable = document.getElementsByClassName("carttable")[0];
   const cartBody = cartTable.querySelectorAll(".cart-items");
@@ -555,32 +556,49 @@ function updatedCartTotal() {
     if (quantityElement) {
       quantity = parseInt(quantityElement.value);
     }
+    console.log(quantity, 'total')
 
-    total = Number(total) + price * quantity;
+    if(price && quantity){
+      total = Number(total) + Number(price) * Number(quantity);
+    }
     
   }
+  
   finalTotal(total);
 }
   function finalTotal(total) {
-    grandtotal = Math.round(total * 100) / 100;
-    const Total = (document.getElementsByClassName(
+    grandtotal = Math.round(Number(total) * 100) / 100;
+    document.getElementsByClassName(
       "cart-total"
-    )[0].textContent = `Total: ₦${grandtotal}`);
+    )[0].textContent = `Total: ₦${grandtotal}`;
     // console.log(grandtotal);
   }
 
-console.log(cartTable)
   const qtyInputs = cartTable.getElementsByClassName("item-qty");
   for (let i = 0; i < qtyInputs.length; i++) {
     const input = qtyInputs[i];
-    input.addEventListener("change", qauntityChanged);
+    input.addEventListener("input", qauntityChanged);
   }
 
   function qauntityChanged(e){
     const input = e.target;
-    alert(e.target.value)
-    if(isNaN(input.value) || input.value <= 0){
+    console.log(input,'input')
+    // alert(e.target.value)
+    if(input.value <= 0){
       input.value = 1;
     }
     updatedCartTotal();
   } 
+
+  document
+    .getElementsByClassName("purchase-button")[0]
+    .addEventListener("click", purchaseItems);
+
+  function purchaseItems() {
+    alert("Thank you for your purchase");
+    const cartitems = document.getElementsByClassName("carttable")[0];
+    while (cartitems.hasChildNodes()) {
+      // cartitems.removeChild(cartitems.firstchild)
+      document.getElementsByClassName("carttable")[0].innerHTML = "";
+    }
+  }
