@@ -18,6 +18,8 @@ const cartTable = document.getElementsByClassName("carttable")[0];
 const carts = document.getElementsByClassName("carts")[0];
 const carticon = document.getElementsByClassName("carticon")[0];
 const carticontwo = document.getElementsByClassName("carticontwo")[0];
+const cartDigit = document.getElementsByClassName("cartdigit")[0];
+const cartDigitTwo = document.getElementsByClassName("cartDigitTwo")[0];
 
 hamburger.addEventListener("click", () => {
   menuBar.classList.toggle("hidden");
@@ -30,8 +32,6 @@ carticontwo.addEventListener("click", () => {
   // e.preventDefault()
   carts.classList.toggle("hidden");
 });
-
-
 
 // ARRAY OF OBJECTS OF PRODUCTS
 const products = [
@@ -244,7 +244,6 @@ for (let items of products) {
 }
 items.innerHTML = product;
 
-
 // FILTERED CATEGORIES
 const filteredComputer = products.filter(
   (product) => product.category === "Computer"
@@ -264,7 +263,6 @@ const filteredHeadset = products.filter(
 const filteredTablet = products.filter(
   (product) => product.category === "Tablet"
 );
-
 
 // FILTERED COMPUTER
 computer.addEventListener("click", (e) => {
@@ -497,6 +495,8 @@ function addCartItem(e) {
   const imageSrc = addItem.getElementsByClassName("image")[0].src;
   console.log(imageSrc);
   addItemsToCart(category, price, imageSrc);
+  cartDigit.innerHTML++;
+  cartDigitTwo.innerHTML++;
 }
 
 function addItemsToCart(category, price, imageSrc) {
@@ -524,27 +524,29 @@ function addItemsToCart(category, price, imageSrc) {
     const button = removebtn[i];
     button.addEventListener("click", removeCartItem);
   }
- 
-  cartSection
-  .getElementsByClassName("item-qty")[0]
-  .addEventListener("change", qauntityChanged);
 
+  cartSection
+    .getElementsByClassName("item-qty")[0]
+    .addEventListener("change", qauntityChanged);
   updatedCartTotal();
 }
 
 // TO REMOVE ITEM FROM CART
 function removeCartItem(e) {
+  cartDigit.innerHTML --;
+  cartDigitTwo.innerHTML --;
   const clickedBtn = e.target.parentElement.remove();
   updatedCartTotal();
+  
 }
 
 // TO UPDATE CART TOTAL
 function updatedCartTotal() {
   const cartTable = document.getElementsByClassName("carttable")[0];
   const cartBody = cartTable.querySelectorAll(".cart-items");
+
   let total = 0;
   for (let i = 0; i < cartBody.length; i++) {
-    
     const cartbodies = cartBody[i];
     const priceElement = cartbodies.getElementsByClassName("item-price")[0];
     const quantityElement = cartbodies.getElementsByClassName("item-qty")[0];
@@ -556,49 +558,48 @@ function updatedCartTotal() {
     if (quantityElement) {
       quantity = parseInt(quantityElement.value);
     }
-    console.log(quantity, 'total')
+    console.log(quantity, "total");
 
-    if(price && quantity){
+    if (price && quantity) {
       total = Number(total) + Number(price) * Number(quantity);
     }
-    
   }
-  
+
   finalTotal(total);
 }
-  function finalTotal(total) {
-    grandtotal = Math.round(Number(total) * 100) / 100;
-    document.getElementsByClassName(
-      "cart-total"
-    )[0].textContent = `Total: ₦${grandtotal}`;
-    // console.log(grandtotal);
+function finalTotal(total) {
+  grandtotal = Math.round(Number(total) * 100) / 100;
+  document.getElementsByClassName(
+    "cart-total"
+  )[0].textContent = `Total: ₦${grandtotal}`;
+  // console.log(grandtotal);
+}
+
+const qtyInputs = cartTable.getElementsByClassName("item-qty");
+for (let i = 0; i < qtyInputs.length; i++) {
+  const input = qtyInputs[i];
+  input.addEventListener("input", qauntityChanged);
+}
+
+function qauntityChanged(e) {
+  const input = e.target;
+  console.log(input, "input");
+  // alert(e.target.value)
+  if (input.value <= 0) {
+    input.value = 1;
   }
+  updatedCartTotal();
+}
 
-  const qtyInputs = cartTable.getElementsByClassName("item-qty");
-  for (let i = 0; i < qtyInputs.length; i++) {
-    const input = qtyInputs[i];
-    input.addEventListener("input", qauntityChanged);
+document
+  .getElementsByClassName("purchase-button")[0]
+  .addEventListener("click", purchaseItems);
+
+function purchaseItems() {
+  alert("Thank you for your purchase");
+  const cartitems = document.getElementsByClassName("carttable")[0];
+  while (cartitems.hasChildNodes()) {
+    // cartitems.removeChild(cartitems.firstchild)
+    document.getElementsByClassName("carttable")[0].innerHTML = "";
   }
-
-  function qauntityChanged(e){
-    const input = e.target;
-    console.log(input,'input')
-    // alert(e.target.value)
-    if(input.value <= 0){
-      input.value = 1;
-    }
-    updatedCartTotal();
-  } 
-
-  document
-    .getElementsByClassName("purchase-button")[0]
-    .addEventListener("click", purchaseItems);
-
-  function purchaseItems() {
-    alert("Thank you for your purchase");
-    const cartitems = document.getElementsByClassName("carttable")[0];
-    while (cartitems.hasChildNodes()) {
-      // cartitems.removeChild(cartitems.firstchild)
-      document.getElementsByClassName("carttable")[0].innerHTML = "";
-    }
-  }
+}

@@ -28,7 +28,6 @@
     <script src="https://checkout.flutterwave.com/v3.js"></script>
   </head>
   <body>
-
     <!-- nav bar -->
     <div
       class="w-[100%] h-[600px] md:h-[600px] relative"
@@ -51,8 +50,11 @@
             <a href="/about.html">About</a>
             <a href="">Products</a>
             <a href="/contact.html">Contact us</a>
-            <div class="carticontwo" >
-              <iconify-icon class="carticontwo" icon="noto:shopping-cart" flip="horizontal"
+            <div class="carticontwo"><span class="cartDigitTwo text-sm border rounded-full px-1 absolute top-3 right-[110px] bg-blue-200 text-red-500">0</span>
+              <iconify-icon
+                class="carticontwo"
+                icon="noto:shopping-cart"
+                flip="horizontal"
                 >cart</iconify-icon
               >
               <span>Cart</span>
@@ -92,19 +94,21 @@
       class="carticon md:hidden mr-[5%] mt-[5%] border rounded-md p-[1%] text-2xl float-right"
       href=""
     >
+      <span class="cartdigit text-lg absolute top-[91%] left-[85%] text-red-500 text-sm border rounded-full px-1 bg-blue-200"
+        >0</span
+      >
       <iconify-icon icon="noto:shopping-cart" flip="horizontal"></iconify-icon>
     </div>
-    <br /><br /><br>
-
+    <br /><br /><br />
 
     <!-- CART ITEMS -->
-<div class="carts hidden ">
-    <div
-      class="carttable item mx-auto w-[90%]"
-      style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
-    >
-      <div class="cart-item flex flex-col justify-center">
-        <!-- <div class="p-[2%] mx-auto flex justify-between">
+    <div class="carts hidden">
+      <div
+        class="carttable item mx-auto w-[90%]"
+        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      >
+        <div class="cart-item flex flex-col justify-center">
+          <!-- <div class="p-[2%] mx-auto flex justify-between">
           <img
             class="w-[50px]"
             src="/images/cart items/4k camcode.jpeg"
@@ -119,25 +123,24 @@
           />
           <div class="item-price text-sm">₦50000</div>
         </div> -->
-        <!-- <button
+          <!-- <button
           class="remove-btn hover:bg-blue-200 bg-blue-500 p-[1%] rounded mx-auto mb-[3%]"
         >
           remove
         </button> -->
+        </div>
+        <br />
       </div>
-      <br>
-    
+      <div class="cart-total text-2xl font-bold text-center">Total: ₦0</div>
+      <div class="flex justify-center mb-[30px]">
+        <button
+          class="purchase-button bg-blue-700 text-white font-bold text-lg rounded-md w-[100px] h-[40px]"
+          onclick="makePayment()"
+        >
+          PURCHASE
+        </button>
+      </div>
     </div>
-    <div class="cart-total text-2xl font-bold text-center">Total: ₦0 </div>
-    <div class="flex justify-center mb-[30px]">
-      <button
-        class="purchase-button bg-blue-700 text-white font-bold text-lg rounded-md w-[100px] h-[40px]" onclick="makePayment()"
-      >
-        PURCHASE
-      </button>
-    </div>
-  </div>
-
 
     <!-- Desktop view of section one-->
     <div
@@ -343,8 +346,7 @@
       </div>
     </footer>
 
-<script src="/payment.js"></script>
+    <script src="/payment.js"></script>
     <script src="/index.js"></script>
   </body>
 </html>
-
